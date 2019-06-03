@@ -1,5 +1,3 @@
-
-
 var https = require('https');
 
 var requestOptions = {
@@ -20,14 +18,12 @@ function getHTML(options, callback) {
     response.on('end', function() {
       callback();
     });
-
   });
-
 }
 
 function printHTML (html) {
-  console.log(html);
+  return html;
 }
 
-
-getHTML(requestOptions, printHTML);
+var example = getHTML(requestOptions, printHTML);
+console.log(example);
